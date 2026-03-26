@@ -1,0 +1,118 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Fuentes del sistema para una apariencia nativa */
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5; /* Color de fondo gris claro, similar a Facebook */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: flex-start; /* Alinea los items al inicio */
+    min-height: 100vh; /* Altura mínima de toda la ventana */
+}
+
+/* Contenedor principal de la aplicación */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave para dar profundidad */
+    width: 100%;
+    max-width: 800px; /* Ancho máximo para no expandirse demasiado en pantallas grandes */
+}
+
+/* Título principal */
+h1 {
+    color: #1c1e21;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Grupos de formulario (label + input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos del formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Texto en negrita */
+    color: #4b4f56;
+}
+
+/* Estilos para campos de subida de archivos y áreas de texto */
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+    font-size: 16px;
+}
+
+/* Estilos específicos para el área de texto */
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+/* Botón principal de envío */
+button {
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s; /* Transición suave para el hover */
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background-color: #128c7e; /* Un verde más oscuro */
+}
+
+/* Estilo del botón cuando está deshabilitado */
+button:disabled {
+    background-color: #a5d6a7; /* Un verde más claro y pálido */
+    cursor: not-allowed;
+}
+
+/* Div para mostrar el resumen del resultado */
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+/* Contenedores para los registros de envíos (éxito y error) */
+.log-box {
+    height: 300px;
+    overflow-y: scroll; /* Scroll vertical cuando el contenido excede la altura */
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+/* Caja de información (para el formato del Excel) */
+.info {
+    font-size: 0.9em;
+    color: #606770;
+    margin-bottom: 20px;
+    background: #f0f2f5;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Estilo para el texto que representa código, como los títulos del Excel */
+code {
+    background-color: #e4e6eb;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
