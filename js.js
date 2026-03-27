@@ -87,6 +87,8 @@ function traducirError(errorMessage) {
 
 // --- RUTAS DEL SERVIDOR ---
 
+app.use(express.static(__dirname));
+
 // 1. Servir la página web principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
