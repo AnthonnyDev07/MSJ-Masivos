@@ -46,7 +46,7 @@ async function enviarMensajes() {
     logsContainer.style.display = 'flex'; // Muestra los contenedores de logs.
     successLog.innerHTML = ''; // Limpia el log de éxitos.
     errorLog.innerHTML = ''; // Limpia el log de errores.
-    
+
     try {
         // Realiza la petición POST al servidor con los datos del formulario.
         const response = await fetch('/enviar-mensajes', {
@@ -75,9 +75,8 @@ async function enviarMensajes() {
             if (done) break;
 
             buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split('
-');
-            buffer = lines.pop(); // Guarda la línea parcial para la siguiente iteración.
+            const lines = buffer.split('\n');
+            buffer = lines.pop();
 
             // Procesa cada línea completa recibida del stream.
             for (const line of lines) {
@@ -146,7 +145,7 @@ function handleStreamEvent(event) {
                 logTarget = errorLog; // Los omitidos también se muestran en el log de errores.
                 break;
         }
-        
+
         if (logTarget) {
             // Crea y añade la entrada de log al contenedor correspondiente.
             let progressEntry = document.createElement('div');
@@ -174,7 +173,7 @@ function handleStreamEvent(event) {
         `;
         resultadoDiv.innerHTML = summaryHtml;
         resultadoDiv.scrollTop = resultadoDiv.scrollHeight;
-        
+
         // Rehabilita el botón y cambia el texto.
         btn.disabled = false;
         btn.innerText = "Enviar Mensajes de Nuevo";
